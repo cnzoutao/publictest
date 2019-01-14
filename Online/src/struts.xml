@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="userlogin" class="com.action.UserLoginAction">
+			<result name="success">/usermain.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="userregister" class="com.action.UserRegisterAction">
+			<result name="success">/usermain.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="userexit" class="com.action.UserExitAction">
+			<result name="success" >/usermain.jsp</result>
+		</action>
+		<action name="modifyuserinfo" class="com.action.ModifyUserinfoAction">
+			<result name="success">/userinfo.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="navoperate" class="com.action.NavOpreateAction">
+			<result name="success">/categories.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="viewmedicine" class="com.action.ViewMedicineAction">
+			<result name="success">/medinfo.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="userbuycar" class="com.action.UserBuycarAction">
+			<result name="success">/buycar.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="userfavorites" class="com.action.UserFavoritesAction">
+			<result name="success">/favorites.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="delfavorites" class="com.action.DelFavoritesAction">
+			<result name="success">/favorites.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="delbuycar" class="com.action.DelBuycarAction">
+			<result name="success">/buycar.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="userpaybuycar" class="com.action.UserpayAction">
+			<result name="success">/userpay.jsp</result>
+		</action>
+		<action name="userrepaybuycar" class="com.action.UserRepayAction">
+			<result name="success">/userpay.jsp</result>
+		</action>
+		<action name="usergotopay" class="com.action.UserGopayAction">
+			<result name="success">/userpaysuccess.jsp</result>
+		</action>
+		<action name="userlistorder" class="com.action.UserListorderAction">
+			<result name="success">/userorders.jsp</result>
+		</action>
+	</package>
+	<package name="mystrutsjson" extends="json-default">
+		<action name="insertbuycar" class="com.action.InsertBuycarAction">
+			<result name="success" type="json">
+				<param name="root">stauts</param>
+			</result>
+		</action>
+		<action name="insertfavorite" class="com.action.InsertFavoriteAction">
+			<result name="success" type="json">
+				<param name="root">stauts</param>
+			</result>
+		</action>
+		<action name="modifypassword" class="com.action.ModifyUserpasswordAction">
+			<result name="success" type="json">
+				<param name="root">stauts</param>
+			</result>
+		</action>
+	</package>
+</struts>    
